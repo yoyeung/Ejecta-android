@@ -15,4 +15,4 @@ Ejecta is published under the [MIT Open Source License](http://opensource.org/li
 4. run ndk-build complie libejecta.so and libJavaScriptCore.so
 5. run eclipse for android apk.
 
-For an example application in the `bin` folder
+For an example application in the `App` folder, rename `Ejecta-android.apk`.
