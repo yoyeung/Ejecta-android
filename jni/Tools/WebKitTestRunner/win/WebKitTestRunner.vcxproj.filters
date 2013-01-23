@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win">
+      <UniqueIdentifier>{113e20a0-5b21-44fe-8c13-f62541f88d6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cg">
+      <UniqueIdentifier>{f91ed64a-e8b7-43c5-a19f-21a841ec62be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cairo">
+      <UniqueIdentifier>{ac41b05b-5ae3-4fc0-a7b0-98ed56f43ca0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="PlatformWebViewWin.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="TestControllerWin.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="TestInvocationWin.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cg\TestInvocationCG.cpp">
+      <Filter>cg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cairo\TestInvocationCairo.cpp">
+      <Filter>cairo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TestController.cpp" />
+    <ClCompile Include="..\TestInvocation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\PlatformWebView.h" />
+    <ClInclude Include="..\TestController.h" />
+    <ClInclude Include="..\TestInvocation.h" />
+    <ClInclude Include="..\WebKitTestRunnerPrefix.h" />
+  </ItemGroup>
+</Project>

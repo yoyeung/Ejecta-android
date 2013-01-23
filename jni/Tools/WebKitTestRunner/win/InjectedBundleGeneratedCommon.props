@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(WebKitVSPropsRedirectionDir)..\..\..\WebKitLibraries\win\tools\vsprops\common.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <NMakeBuildCommandLine>if exist "$(ConfigurationBuildDir)\buildfailed" grep XX$(ProjectName)XX "$(ConfigurationBuildDir)\buildfailed"
+if errorlevel 1 exit 1
+echo XX$(ProjectName)XX &gt; "$(ConfigurationBuildDir)\buildfailed"
+
+set PATH=$(SystemDrive)\cygwin\bin%3b$(PATH)
+bash build-generated-files.sh "$(ConfigurationBuildDir)" "$(WebKitLibrariesDir)"
+if errorlevel 1 exit 1
+
+if exist "$(ConfigurationBuildDir)\buildfailed" del "$(ConfigurationBuildDir)\buildfailed"
+</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>echo XX$(ProjectName)XX &gt; "$(ConfigurationBuildDir)\buildfailed"
+
+del /s /q "$(ConfigurationBuildDir)\obj\InjectedBundle\DerivedSources"
+set PATH=$(SystemDrive)\cygwin\bin%3b$(PATH)
+bash build-generated-files.sh "$(ConfigurationBuildDir)" "$(WebKitLibrariesDir)"
+if errorlevel 1 exit 1
+
+if exist "$(ConfigurationBuildDir)\buildfailed" del "$(ConfigurationBuildDir)\buildfailed"
+</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>del /s /q "$(ConfigurationBuildDir)\obj\InjectedBundle\DerivedSources"
+if exist "$(ConfigurationBuildDir)\buildfailed" del "$(ConfigurationBuildDir)\buildfailed"
+</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <OutDir>$(ConfigurationBuildDir)\lib\</OutDir>
+  </PropertyGroup>
+</Project>

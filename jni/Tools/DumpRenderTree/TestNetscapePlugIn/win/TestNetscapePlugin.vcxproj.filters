@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{2637b8b9-8693-4dfb-8978-0157a83f0070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\win">
+      <UniqueIdentifier>{82bd5da3-cb10-42dc-bea0-2724321c4a54}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Tests\DocumentOpenInDestroyStream.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\EvaluateJSAfterRemovingPluginElement.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\GetURLWithJavaScriptURLDestroyingPlugin.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\GetUserAgentWithNullNPPFromNPPNew.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\NPDeallocateCalledBeforeNPShutdown.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\NPPSetWindowCalledDuringDestruction.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\NPRuntimeObjectFromDestroyedPlugin.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\NPRuntimeRemoveProperty.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\NullNPPGetValuePointer.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\PassDifferentNPPStruct.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\PluginScriptableNPObjectInvokeDefault.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\win\DrawsGradient.cpp">
+      <Filter>Tests\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\win\GetValueNetscapeWindow.cpp">
+      <Filter>Tests\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\win\NPNInvalidateRectInvalidatesWindow.cpp">
+      <Filter>Tests\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\win\WindowGeometryInitializedBeforeSetWindow.cpp">
+      <Filter>Tests\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\win\WindowlessPaintRectCoordinates.cpp">
+      <Filter>Tests\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\win\WindowRegionIsSetToClipRect.cpp">
+      <Filter>Tests\win</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowedPluginTest.cpp">
+      <Filter>Tests\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\PluginObject.cpp" />
+    <ClCompile Include="..\PluginTest.cpp" />
+    <ClCompile Include="..\TestObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WindowedPluginTest.h">
+      <Filter>Tests\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PluginObject.h" />
+    <ClInclude Include="..\PluginTest.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\TestObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestNetscapePlugin.def" />
+    <None Include="TestNetscapePlugin_debug.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TestNetscapePlugin.rc" />
+  </ItemGroup>
+</Project>

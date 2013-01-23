@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)\.;$(ProjectDir)\..;$(ConfigurationBuildDir)\Include;$(ConfigurationBuildDir)\Include\private;$(ConfigurationBuildDir)\Include\DumpRenderTree\ForwardingHeaders;$(ConfigurationBuildDir)\Include\JavaScriptCore;$(ConfigurationBuildDir)\Include\private\JavaScriptCore;$(WebKitLibrariesDir)\Include;$(WebKitLibrariesDir)\Include\private;$(WebKitLibrariesDir)\include\pthreads;$(ConfigurationBuildDir)\Include\WebCore;$(WebKitLibrariesDir)\Include\WebCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4146;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>DumpRenderTreePrefix.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/NXCOMPAT %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>JavaScriptCore$(WebKitDLLConfigSuffix).lib;WebKitGUID$(WebKitConfigSuffix).lib;WebKit$(WebKitDLLConfigSuffix).lib;pthreadVC2$(LibraryConfigSuffix).lib;gdi32.lib;ole32.lib;oleaut32.lib;user32.lib;shlwapi.lib;oleacc.lib;comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

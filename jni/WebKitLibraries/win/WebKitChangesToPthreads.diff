@@ -1,0 +1,127 @@
+--- pthreads-w32-2-7-0-release/Makefile	2007-06-08 18:39:45.000000000 -0700
++++ pthreads-w32-2-7-0-release-webkit/Makefile	2006-09-13 17:11:35.000000000 -0700
+@@ -1,6 +1,5 @@
+ # This makefile is compatible with MS nmake and can be used as a
+-# replacement for buildlib.bat. I've changed the target from an ordinary dll
+-# (/LD) to a debugging dll (/LDd).
++# replacement for buildlib.bat. 
+ # 
+ # The variables $DLLDEST and $LIBDEST hold the destination directories for the
+ # dll and the lib, respectively. Probably all that needs to change is $DEVROOT.
+@@ -9,7 +8,7 @@
+ # DLL_VER:
+ # See pthread.h and README - This number is computed as 'current - age'
+ DLL_VER	= 2
+-DLL_VERD= $(DLL_VER)d
++DLL_VERD= $(DLL_VER)_debug
+ 
+ DEVROOT	= C:\pthreads
+ 
+@@ -28,11 +27,9 @@
+ OPTIMD	=
+ 
+ CFLAGS	= /W3 /MD /nologo /Yd /I. /D_WIN32_WINNT=0x400 /DHAVE_CONFIG_H
+-CFLAGSD	= /Zi $(CFLAGS)
++CFLAGSD	= /Zi $(CFLAGS) /MDd
+ 
+ LFLAGS = /MD /LD /Zi
+-LFLAGS = /MD /LD /Zi
+-LFLAGSD = /MDd /LDd /Zi
+ LFLAGSD = /MDd /LDd /Zi
+ 
+ # Default cleanup style
+@@ -411,10 +408,10 @@
+ 	@ nmake /nologo EHFLAGS="$(OPTIMD) $(VSEFLAGSD)" CLEANUP=__CLEANUP_SEH pthreadVSE$(DLL_VERD).dll
+ 
+ VC:
+-	@ nmake /nologo EHFLAGS="$(OPTIM) $(VCFLAGS)" CLEANUP=__CLEANUP_C pthreadVC$(DLL_VER).dll
++	@ nmake /nologo LNKFLAGS="$(LFLAGS)" EHFLAGS="$(OPTIM) $(VCFLAGS)" CLEANUP=__CLEANUP_C pthreadVC$(DLL_VER).dll
+ 
+ VC-debug:
+-	@ nmake /nologo EHFLAGS="$(OPTIMD) $(VCFLAGSD)" CLEANUP=__CLEANUP_C pthreadVC$(DLL_VERD).dll
++	@ nmake /nologo LNKFLAGS="$(LFLAGSD)" EHFLAGS="$(OPTIMD) $(VCFLAGSD)" CLEANUP=__CLEANUP_C pthreadVC$(DLL_VERD).dll
+ 
+ #
+ # The so-called inlined DLL is just a single translation unit with
+@@ -468,14 +465,14 @@
+ 	copy semaphore.h $(HDRDEST)
+ 
+ $(DLLS): $(DLL_OBJS)
+-	cl /LDd /Zi /nologo $(DLL_OBJS) \
++	cl $(LNKFLAGS) /nologo $(DLL_OBJS) \
+ 		/link /nodefaultlib:libcmt /implib:$*.lib \
+-		msvcrt.lib wsock32.lib /out:$@
++		wsock32.lib /out:$@
+ 
+ $(INLINED_STAMPS): $(DLL_INLINED_OBJS)
+-	cl /LDd /Zi /nologo $(DLL_INLINED_OBJS) \
++	cl $(LNKFLAGS) /nologo $(DLL_INLINED_OBJS) \
+ 		/link /nodefaultlib:libcmt /implib:$*.lib \
+-		msvcrt.lib wsock32.lib /out:$*.dll
++		wsock32.lib /out:$*.dll
+ 
+ $(STATIC_STAMPS): $(DLL_INLINED_OBJS)
+ 	if exist $*.lib del $*.lib
+
+--- pthreads-w32-2-7-0-release/pthread_win32_attach_detach_np.c	2007-06-08 18:45:21.000000000 -0700
++++ pthreads-w32-2-7-0-release-webkit/pthread_win32_attach_detach_np.c	2007-04-14 13:25:13.000000000 -0700
+@@ -133,58 +133,7 @@
+       ptw32_features |= PTW32_SYSTEM_INTERLOCKED_COMPARE_EXCHANGE;
+     }
+
+-  /*
+-   * Load QUSEREX.DLL and try to get address of QueueUserAPCEx
+-   */
+-  ptw32_h_quserex = LoadLibrary (TEXT ("QUSEREX.DLL"));
+-
+-  if (ptw32_h_quserex != NULL)
+-    {
+-      ptw32_register_cancelation = (DWORD (*)(PAPCFUNC, HANDLE, DWORD))
+-#if defined(NEED_UNICODE_CONSTS)
+-      GetProcAddress (ptw32_h_quserex,
+-                      (const TCHAR *) TEXT ("QueueUserAPCEx"));
+-#else
+-      GetProcAddress (ptw32_h_quserex, (LPCSTR) "QueueUserAPCEx");
+-#endif
+-    }
+-
+-  if (NULL == ptw32_register_cancelation)
+-    {
+-      ptw32_register_cancelation = ptw32_RegisterCancelation;
+-
+-      if (ptw32_h_quserex != NULL)
+-      {
+-        (void) FreeLibrary (ptw32_h_quserex);
+-      }
+-      ptw32_h_quserex = 0;
+-    }
+-  else
+-    {
+-      /* Initialise QueueUserAPCEx */
+-      BOOL (*queue_user_apc_ex_init) (VOID);
+-
+-      queue_user_apc_ex_init = (BOOL (*)(VOID))
+-#if defined(NEED_UNICODE_CONSTS)
+-      GetProcAddress (ptw32_h_quserex,
+-                      (const TCHAR *) TEXT ("QueueUserAPCEx_Init"));
+-#else
+-      GetProcAddress (ptw32_h_quserex, (LPCSTR) "QueueUserAPCEx_Init");
+-#endif
+-
+-      if (queue_user_apc_ex_init == NULL || !queue_user_apc_ex_init ())
+-      {
+-        ptw32_register_cancelation = ptw32_RegisterCancelation;
+-
+-        (void) FreeLibrary (ptw32_h_quserex);
+-        ptw32_h_quserex = 0;
+-      }
+-    }
+-
+-  if (ptw32_h_quserex)
+-    {
+-      ptw32_features |= PTW32_ALERTABLE_ASYNC_CANCEL;
+-    }
++  ptw32_register_cancelation = ptw32_RegisterCancelation;
+
+   return result;
+ }

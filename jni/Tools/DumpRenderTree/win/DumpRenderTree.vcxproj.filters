@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Controllers">
+      <UniqueIdentifier>{f97ff009-8784-4757-a5d1-340653bdd671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Delegates">
+      <UniqueIdentifier>{e4588bd2-6788-409d-bc55-68f128521183}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\AccessibilityController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="AccessibilityControllerWin.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="EventSender.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GCController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="GCControllerWin.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LayoutTestController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="LayoutTestControllerWin.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="DRTDesktopNotificationPresenter.cpp">
+      <Filter>Delegates</Filter>
+    </ClCompile>
+    <ClCompile Include="EditingDelegate.cpp">
+      <Filter>Delegates</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameLoadDelegate.cpp">
+      <Filter>Delegates</Filter>
+    </ClCompile>
+    <ClCompile Include="HistoryDelegate.cpp">
+      <Filter>Delegates</Filter>
+    </ClCompile>
+    <ClCompile Include="PolicyDelegate.cpp">
+      <Filter>Delegates</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceLoadDelegate.cpp">
+      <Filter>Delegates</Filter>
+    </ClCompile>
+    <ClCompile Include="UIDelegate.cpp">
+      <Filter>Delegates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AccessibilityTextMarker.cpp" />
+    <ClCompile Include="..\AccessibilityUIElement.cpp" />
+    <ClCompile Include="AccessibilityUIElementWin.cpp" />
+    <ClCompile Include="..\CyclicRedundancyCheck.cpp" />
+    <ClCompile Include="DumpRenderTree.cpp" />
+    <ClCompile Include="MD5.cpp" />
+    <ClCompile Include="..\PixelDumpSupport.cpp" />
+    <ClCompile Include="..\cairo\PixelDumpSupportCairo.cpp" />
+    <ClCompile Include="..\cg\PixelDumpSupportCG.cpp" />
+    <ClCompile Include="PixelDumpSupportWin.cpp" />
+    <ClCompile Include="..\WorkQueue.cpp" />
+    <ClCompile Include="WorkQueueItemWin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AccessibilityController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSender.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GCController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LayoutTestController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="DRTDesktopNotificationPresenter.h">
+      <Filter>Delegates</Filter>
+    </ClInclude>
+    <ClInclude Include="EditingDelegate.h">
+      <Filter>Delegates</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameLoadDelegate.h">
+      <Filter>Delegates</Filter>
+    </ClInclude>
+    <ClInclude Include="HistoryDelegate.h">
+      <Filter>Delegates</Filter>
+    </ClInclude>
+    <ClInclude Include="PolicyDelegate.h">
+      <Filter>Delegates</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceLoadDelegate.h">
+      <Filter>Delegates</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDelegate.h">
+      <Filter>Delegates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AccessibilityTextMarker.h" />
+    <ClInclude Include="..\AccessibilityUIElement.h" />
+    <ClInclude Include="..\CyclicRedundancyCheck.h" />
+    <ClInclude Include="DraggingInfo.h" />
+    <ClInclude Include="..\DumpRenderTree.h" />
+    <ClInclude Include="..\DumpRenderTreePrefix.h" />
+    <ClInclude Include="DumpRenderTreeWin.h" />
+    <ClInclude Include="..\PixelDumpSupport.h" />
+    <ClInclude Include="..\WorkQueue.h" />
+    <ClInclude Include="..\WorkQueueItem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="MD5.h" />
+    <CustomBuildStep Include="..\cairo\PixelDumpSupportCairo.h" />
+    <CustomBuildStep Include="..\cg\PixelDumpSupportCG.h" />
+  </ItemGroup>
+</Project>

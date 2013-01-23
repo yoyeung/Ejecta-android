@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <WebKitConfigSuffix>_debug</WebKitConfigSuffix>
+    <LibraryConfigSuffix>_debug</LibraryConfigSuffix>
+    <WebKitDLLConfigSuffix>_debug</WebKitDLLConfigSuffix>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>USE_DEBUG_SAFARI_THEME;DEBUG_INTERNAL;DEBUG_ALL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="WebKitConfigSuffix">
+      <Value>$(WebKitConfigSuffix)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="LibraryConfigSuffix">
+      <Value>$(LibraryConfigSuffix)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="WebKitDLLConfigSuffix">
+      <Value>$(WebKitDLLConfigSuffix)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

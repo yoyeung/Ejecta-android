@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <ConfigurationBuildDir>$(WebKitOutputDir)\$(Configuration)</ConfigurationBuildDir>
+    <ProductionBuild>0</ProductionBuild>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <OutDir>$(ConfigurationBuildDir)\bin\</OutDir>
+    <IntDir>$(ConfigurationBuildDir)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="ConfigurationBuildDir">
+      <Value>$(ConfigurationBuildDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ProductionBuild">
+      <Value>$(ProductionBuild)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

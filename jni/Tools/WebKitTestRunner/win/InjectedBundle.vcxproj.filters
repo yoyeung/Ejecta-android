@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Bindings">
+      <UniqueIdentifier>{589200df-3a76-4092-b4a6-ad7e8e46b5fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Derived Sources">
+      <UniqueIdentifier>{8e284df5-9887-4125-8bf3-2362dffe947c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\InjectedBundle\Bindings\CodeGeneratorTestRunner.pm">
+      <Filter>Bindings</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\InjectedBundle\Bindings\JSWrappable.h">
+      <Filter>Bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InjectedBundle\Bindings\JSWrapper.h">
+      <Filter>Bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ConfigurationBuildDir)\obj\$(ProjectName)\DerivedSources\JSEventSendingController.h">
+      <Filter>Derived Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ConfigurationBuildDir)\obj\$(ProjectName)\DerivedSources\JSGCController.h">
+      <Filter>Derived Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ConfigurationBuildDir)\obj\$(ProjectName)\DerivedSources\JSLayoutTestController.h">
+      <Filter>Derived Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InjectedBundle\EventSendingController.h" />
+    <ClInclude Include="..\InjectedBundle\GCController.h" />
+    <ClInclude Include="..\InjectedBundle\InjectedBundle.h" />
+    <ClInclude Include="..\InjectedBundle\InjectedBundlePage.h" />
+    <ClInclude Include="..\InjectedBundle\LayoutTestController.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\InjectedBundle\Bindings\JSWrapper.cpp">
+      <Filter>Bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ConfigurationBuildDir)\obj\$(ProjectName)\DerivedSources\JSEventSendingController.cpp">
+      <Filter>Derived Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ConfigurationBuildDir)\obj\$(ProjectName)\DerivedSources\JSGCController.cpp">
+      <Filter>Derived Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ConfigurationBuildDir)\obj\$(ProjectName)\DerivedSources\JSLayoutTestController.cpp">
+      <Filter>Derived Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InjectedBundle\win\ActivateFonts.cpp" />
+    <ClCompile Include="..\InjectedBundle\win\InjectedBundleWin.cpp" />
+    <ClCompile Include="..\InjectedBundle\EventSendingController.cpp" />
+    <ClCompile Include="..\InjectedBundle\GCController.cpp" />
+    <ClCompile Include="..\InjectedBundle\InjectedBundle.cpp" />
+    <ClCompile Include="..\InjectedBundle\InjectedBundleMain.cpp" />
+    <ClCompile Include="..\InjectedBundle\InjectedBundlePage.cpp" />
+    <ClCompile Include="..\InjectedBundle\LayoutTestController.cpp" />
+    <ClCompile Include="..\InjectedBundle\win\LayoutTestControllerWin.cpp" />
+  </ItemGroup>
+</Project>

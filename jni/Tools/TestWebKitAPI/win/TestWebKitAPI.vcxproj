@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_All|Win32">
+      <Configuration>Debug_All</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_Cairo_CFLite|Win32">
+      <Configuration>Debug_Cairo_CFLite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Production|Win32">
+      <Configuration>Production</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Cairo_CFLite|Win32">
+      <Configuration>Release_Cairo_CFLite</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3E48AB23-D249-488F-A1C4-43CDF52FBD28}</ProjectGuid>
+    <RootNamespace>TestWebKitAPI</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Cairo_CFLite|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Cairo_CFLite|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_All|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Configurations\TestWebKitAPIRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Cairo_CFLite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Configurations\TestWebKitAPIReleaseCairoCFLite.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Cairo_CFLite|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Configurations\TestWebKitAPIDebugCairoCFLite.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_All|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Configurations\TestWebKitAPIDebugAll.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Configurations\TestWebKitAPIRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Configurations\TestWebKitAPIDebug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_All|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_All|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_All|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_Cairo_CFLite|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_Cairo_CFLite|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_Cairo_CFLite|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Production|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Production|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Production|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_Cairo_CFLite|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_Cairo_CFLite|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_Cairo_CFLite|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PlatformUtilitiesWin.cpp" />
+    <ClCompile Include="PlatformWebViewWin.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\AboutBlankLoad.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\CanHandleRequest.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\CookieManager.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\DocumentStartUserScriptAlertCrash.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\EvaluateJavaScript.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\FailedLoad.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\Find.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\ForceRepaint.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\FrameMIMETypeHTML.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\FrameMIMETypePNG.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\HitTestResultNodeHandle.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\InjectedBundleBasic.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\PageLoadBasic.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\PageLoadDidChangeLocationWithinPageForFrame.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\PreventEmptyUserAgent.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\ResponsivenessTimerDoesntFireEarly.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\RestoreSessionStateContainingFormData.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\SpacebarScrolling.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\WKPreferences.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\WKString.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\WKStringJSString.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\win\AltKeyGeneratesWMSysCommand.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\win\DoNotCopyANullCFURLResponse.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_Cairo_CFLite|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Cairo_CFLite|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\win\HideFindIndicator.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\win\ResizeViewWhileHidden.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\win\TranslateMessageGeneratesWMChar.cpp" />
+    <ClCompile Include="..\Tests\WebKit2\win\WMCloseCallsUIClientClose.cpp" />
+    <ClCompile Include="..\Tests\WTF\VectorBasic.cpp" />
+    <ClCompile Include="..\JavaScriptTest.cpp" />
+    <ClCompile Include="..\PlatformUtilities.cpp" />
+    <ClCompile Include="..\TestsController.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WindowMessageObserver.h" />
+    <ClInclude Include="..\JavaScriptTest.h" />
+    <ClInclude Include="..\PlatformUtilities.h" />
+    <ClInclude Include="..\PlatformWebView.h" />
+    <ClInclude Include="..\Test.h" />
+    <ClInclude Include="..\TestsController.h" />
+    <ClInclude Include="..\TestWebKitAPIPrefix.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Tests\WebKit2\file-with-anchor.html" />
+    <None Include="..\Tests\WebKit2\find.html" />
+    <None Include="..\Tests\WebKit2\icon.png" />
+    <None Include="..\Tests\WebKit2\simple-accelerated-compositing.html" />
+    <None Include="..\Tests\WebKit2\simple-form.html" />
+    <None Include="..\Tests\WebKit2\simple.html" />
+    <None Include="..\Tests\WebKit2\spacebar-scrolling.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="TestWebKitAPIGenerated.vcxproj">
+      <Project>{45c45411-7f0e-404d-919a-4ee9bb60be86}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

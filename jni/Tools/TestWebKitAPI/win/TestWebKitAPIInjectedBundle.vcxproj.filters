@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win">
+      <UniqueIdentifier>{a143a7dc-fb8c-4ba5-999f-5cdba8c9168a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{d6311363-9fbc-4ea1-a6b3-ec7a105a5f88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\WebKit2">
+      <UniqueIdentifier>{80617764-e733-417c-88ec-a40ad3eb98f1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PlatformUtilitiesWin.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\CanHandleRequest_Bundle.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\DocumentStartUserScriptAlertCrash_Bundle.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\HitTestResultNodeHandle_Bundle.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\InjectedBundleBasic_Bundle.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\ResponsivenessTimerDoesntFireEarly_Bundle.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InjectedBundleController.cpp" />
+    <ClCompile Include="..\InjectedBundleMain.cpp" />
+    <ClCompile Include="..\PlatformUtilities.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\InjectedBundleController.h" />
+    <ClInclude Include="..\InjectedBundleTest.h" />
+    <ClInclude Include="..\PlatformUtilities.h" />
+  </ItemGroup>
+</Project>

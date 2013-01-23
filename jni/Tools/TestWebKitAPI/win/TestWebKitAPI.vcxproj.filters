@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win">
+      <UniqueIdentifier>{00dc14f3-7cfb-4c02-8830-a9053786d0f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{e3c7d1d2-f8b1-493d-93a7-783bfdd5e0d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\WebKit2">
+      <UniqueIdentifier>{642e4cb0-81be-4dad-b01e-51f8f28d6310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\WebKit2\win">
+      <UniqueIdentifier>{2fc591ab-6f39-4516-a5b1-b4ccba7876d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\WTF">
+      <UniqueIdentifier>{19a240a9-7cfd-4922-9403-b7399677fcf9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="PlatformUtilitiesWin.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="PlatformWebViewWin.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\AboutBlankLoad.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\CanHandleRequest.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\CookieManager.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\DocumentStartUserScriptAlertCrash.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\EvaluateJavaScript.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\FailedLoad.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\Find.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\ForceRepaint.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\FrameMIMETypeHTML.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\FrameMIMETypePNG.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\HitTestResultNodeHandle.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\InjectedBundleBasic.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\PageLoadBasic.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\PageLoadDidChangeLocationWithinPageForFrame.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\PreventEmptyUserAgent.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\ResponsivenessTimerDoesntFireEarly.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\RestoreSessionStateContainingFormData.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\SpacebarScrolling.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\WKPreferences.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\WKString.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\WKStringJSString.cpp">
+      <Filter>Tests\WebKit2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\win\AltKeyGeneratesWMSysCommand.cpp">
+      <Filter>Tests\WebKit2\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\win\DoNotCopyANullCFURLResponse.cpp">
+      <Filter>Tests\WebKit2\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\win\HideFindIndicator.cpp">
+      <Filter>Tests\WebKit2\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\win\ResizeViewWhileHidden.cpp">
+      <Filter>Tests\WebKit2\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\win\TranslateMessageGeneratesWMChar.cpp">
+      <Filter>Tests\WebKit2\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WebKit2\win\WMCloseCallsUIClientClose.cpp">
+      <Filter>Tests\WebKit2\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tests\WTF\VectorBasic.cpp">
+      <Filter>Tests\WTF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\JavaScriptTest.cpp" />
+    <ClCompile Include="..\PlatformUtilities.cpp" />
+    <ClCompile Include="..\TestsController.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WindowMessageObserver.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\JavaScriptTest.h" />
+    <ClInclude Include="..\PlatformUtilities.h" />
+    <ClInclude Include="..\PlatformWebView.h" />
+    <ClInclude Include="..\Test.h" />
+    <ClInclude Include="..\TestsController.h" />
+    <ClInclude Include="..\TestWebKitAPIPrefix.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Tests\WebKit2\file-with-anchor.html">
+      <Filter>Tests\WebKit2</Filter>
+    </None>
+    <None Include="..\Tests\WebKit2\find.html">
+      <Filter>Tests\WebKit2</Filter>
+    </None>
+    <None Include="..\Tests\WebKit2\icon.png">
+      <Filter>Tests\WebKit2</Filter>
+    </None>
+    <None Include="..\Tests\WebKit2\simple-accelerated-compositing.html">
+      <Filter>Tests\WebKit2</Filter>
+    </None>
+    <None Include="..\Tests\WebKit2\simple-form.html">
+      <Filter>Tests\WebKit2</Filter>
+    </None>
+    <None Include="..\Tests\WebKit2\simple.html">
+      <Filter>Tests\WebKit2</Filter>
+    </None>
+    <None Include="..\Tests\WebKit2\spacebar-scrolling.html">
+      <Filter>Tests\WebKit2</Filter>
+    </None>
+  </ItemGroup>
+</Project>
